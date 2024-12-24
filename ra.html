@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu with Cart</title>
+  <link rel="stylesheet" href="RA.css">
+</head>
+<body>
+  <header>
+    <h1>Restaurant Menu</h1>
+    <p>Delicious food for every taste!</p>
+  </header>
+
+  <main>
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <button class="cart-btn" onclick="toggleCart()">View Cart (<span id="cart-count">0</span> items)</button>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button class="category-btn" onclick="filterMenu('all')">All</button>
+      <button class="category-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+      <button class="category-btn" onclick="filterMenu('main')">Main Courses</button>
+      <button class="category-btn" onclick="filterMenu('desserts')">Desserts</button>
+    </div>
+
+    <!-- Menu Sections -->
+    <section id="appetizers" class="menu-category" data-category="appetizers">
+      <h2>Appetizers</h2>
+      <ul>
+        <li>
+          <div class="dish">
+            <img src="Bruschetta.jpg" alt="Dish 1">
+            <div class="dish-info">
+              <h3>Bruschetta</h3>
+              <p>Toasted bread with tomato and basil topping.</p>
+              <span class="price">$8.99</span>
+              <button class="add-to-cart" onclick="addToCart('Bruschetta', 8.99)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dish">
+            <img src="STUFFED mushroom.jpg" alt="Dish 2">
+            <div class="dish-info">
+              <h3>Stuffed Mushrooms</h3>
+              <p>Delicious mushrooms stuffed with cheese and herbs.</p>
+              <span class="price">$9.49</span>
+              <button class="add-to-cart" onclick="addToCart('Stuffed Mushrooms', 9.49)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="main-courses" class="menu-category" data-category="main">
+      <h2>Main Courses</h2>
+      <ul>
+        <li>
+          <div class="dish">
+            <img src="Grill steak.jpg" alt="Dish 3">
+            <div class="dish-info">
+              <h3>Grilled Steak</h3>
+              <p>Juicy steak grilled to perfection.</p>
+              <span class="price">$24.99</span>
+              <button class="add-to-cart" onclick="addToCart('Grilled Steak', 24.99)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dish">
+            <img src="pata.jpg" alt="Dish 4">
+            <div class="dish-info">
+              <h3>Vegetable Pasta</h3>
+              <p>Fresh pasta with seasonal vegetables.</p>
+              <span class="price">$14.99</span>
+              <button class="add-to-cart" onclick="addToCart('Vegetable Pasta', 14.99)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="desserts" class="menu-category" data-category="desserts">
+      <h2>Desserts</h2>
+      <ul>
+        <li>
+          <div class="dish">
+            <img src="choco cake.jpg" alt="Dish 5">
+            <div class="dish-info">
+              <h3>Chocolate Cake</h3>
+              <p>Rich chocolate cake with creamy frosting.</p>
+              <span class="price">$7.99</span>
+              <button class="add-to-cart" onclick="addToCart('Chocolate Cake', 7.99)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dish">
+            <img src="New-York-Cheesecake-Recipe-Video.jpg" alt="Dish 6">
+            <div class="dish-info">
+              <h3>Cheesecake</h3>
+              <p>Classic cheesecake with a buttery crust.</p>
+              <span class="price">$6.99</span>
+              <button class="add-to-cart" onclick="addToCart('Cheesecake', 6.99)">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <h2>Your Cart </h2>
+        <ul id="cart-items">
+          <!-- Cart items will be displayed here -->
+        </ul>
+        <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        <button class="close-btn" onclick="toggleCart()">Close</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p align="center">Thanks for dining with us!</p>
+  </footer>
+
+  <script src="ra.js"></script>
+</body>
+</html>
