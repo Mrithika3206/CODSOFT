@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="signup-flow">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <h1>Welcome to MyApp</h1>
+            <p>Sign up to get started</p>
+            <button id="signup-button" class="cta-button">Sign Up</button>
+        </div>
+
+        <!-- Social Login -->
+        <div id="social-login-screen" class="screen">
+            <h2>Signup using</h2>
+            <button id="google-signup" class="social-button">Sign up with Google</button>
+            <button id="facebook-signup" class="social-button">Sign up with Facebook</button>
+            <button id="email-signup" class="social-button">Sign up with Email</button>
+        </div>
+
+        <!-- Email & Password Signup -->
+        <div id="email-signup-form" class="screen">
+            <h2>Create Your Account</h2>
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <input type="password" id="password" placeholder="Enter your password" required />
+            <div id="password-strength" class="password-strength">Password strength: <span id="strength-level">Weak</span></div>
+            <div id="error-message" class="error-message"></div>
+            <button id="next-button" class="cta-button">Next</button>
+        </div>
+
+        <!-- Verification -->
+        <div id="verification-screen" class="screen">
+            <h2>Enter Verification Code</h2>
+            <input type="text" id="verification-code" placeholder="Enter code" maxlength="6" />
+            <button id="verify-button" class="cta-button">Verify</button>
+            <button id="resend-button" class="secondary-button">Resend Code</button>
+        </div>
+
+        <!-- Terms & Conditions -->
+        <div id="terms-screen" class="screen">
+            <h2>Agree to Terms and Conditions</h2>
+            <input type="checkbox" id="agree" /> I agree to the Terms and Privacy Policy.
+            <button id="agree-button" class="cta-button" disabled>Continue</button>
+        </div>
+
+        <!-- Profile Setup -->
+        <div id="profile-screen" class="screen">
+            <h2>Complete Your Profile</h2>
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="text" id="location" placeholder="Location" />
+            <input type="file" id="profile-pic" accept="image/*" />
+            <button id="profile-continue" class="cta-button">Continue</button>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="screen">
+            <h2>Account Created Successfully!</h2>
+            <button id="start-button" class="cta-button">Start Using the App</button>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
